@@ -7,7 +7,7 @@ public class CharacterGUI extends GBFrame{
 	private JButton calculate;
 	private JLabel inputlabel;
 	private JTextArea area;
-	private Character character;
+	private Character character = new Character();
 	
 	
 	public static void main(String[] args) {
@@ -22,13 +22,14 @@ public class CharacterGUI extends GBFrame{
 		calculate = addButton("Calculate",3,1,1,1);
 		inputlabel = addLabel("Input a sentence:",1,1,1,1);
 		area = addTextArea("",2,1,1,1);
-		character = new Character();
 		
 	}
 	
 	public void buttonClicked(JButton button) {
 		if(button == calculate) {
-			character.setOG(area.getText());
+			character.getInput(area.getText());
+			character.tester();
+			
 			
 			
 		}
