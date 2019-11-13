@@ -28,10 +28,8 @@ public class CharacterGUI extends GBFrame{
 	public void buttonClicked(JButton button) {
 		if(button == calculate) {
 			character.getInput(area.getText());
+			character.storeWords();
 			character.tester();
-			
-			
-			
 		}
 		
 		
