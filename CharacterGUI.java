@@ -1,3 +1,7 @@
+//Aditya Agrawal
+// 14 November 2019
+// Character Program
+// This program will output word and character count as well as the individual words and their counts
 package characterprogram;
 
 import javax.swing.*;
