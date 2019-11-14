@@ -8,6 +8,7 @@ public class CharacterGUI extends GBFrame {
 	private JLabel inputlabel;
 	private JTextArea area;
 	private JButton reset;
+	private JButton end;
 	private Character character = new Character();
 
 	public static void main(String[] args) {
@@ -15,7 +16,7 @@ public class CharacterGUI extends GBFrame {
 		JFrame gui = new CharacterGUI();
 		gui.setTitle("Word Counter");
 		gui.setVisible(true);
-		gui.setSize(800, 400);
+		gui.setSize(800, 600);
 	}
 
 	public CharacterGUI() {
@@ -23,6 +24,7 @@ public class CharacterGUI extends GBFrame {
 		inputlabel = addLabel("Input a sentence:", 1, 1, 1, 1);
 		area = addTextArea("", 2, 1, 1, 1);
 		reset = addButton("Reset", 4, 1, 1, 1);
+		end = addButton("End", 5, 1, 1, 1);
 		area.requestFocus();
 		reset.setEnabled(false);
 
@@ -53,6 +55,8 @@ public class CharacterGUI extends GBFrame {
 			area.requestFocus();
 			calculate.setEnabled(true);
 			reset.setEnabled(false);
+		} else if (button == end) {
+			System.exit(0);
 		}
 
 	}
